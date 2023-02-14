@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-4/5 mx-auto p-8 bg-emerald-400">
+        <div class="w-3/4 mx-auto p-8 bg-blue-300 border-2 border-slate-900">
+            <div class="rounded-lg flex justify-between items-center">
+                <div class="flex gap-4">
+                    <button class="text-slate-800 cursor-pointer font-medium text-2xl py-1 px-3 rounded-md" id="bold">B</button>
+                    <button class="text-slate-800 cursor-pointer text-xl py-1 px-3 rounded-md" id="italic"><i class="fa-solid fa-italic"></i></button>
+                    <button class="text-slate-800 cursor-pointer font-medium text-2xl py-1 px-3 underline rounded-md" id="text-underline">U</button>
+                </div>
+                <div class="flex gap-4">
+                    <button class="text-slate-800 cursor-pointer text-xl py-1 px-3 rounded-md" id="align-left"><i class="fa-solid fa-align-left"></i></button>
+                    <button class="text-slate-800 cursor-pointer text-xl py-1 px-3 rounded-md" id="align-center"><i class="fa-solid fa-align-center"></i></button>
+                    <button class="text-slate-800 cursor-pointer text-xl py-1 px-3 rounded-md" id="align-right"><i class="fa-solid fa-align-right"></i></button>
+                    <button class="text-slate-800 cursor-pointer text-xl py-1 px-3 rounded-md" id="align-justify"><i class="fa-solid fa-align-justify"></i></button>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <input type="number" id="number" class="w-12 h-10 pl-2 bg-transparent font-medium text-xl text-slate-800" value="14">
+                    <input type="button" id="text-lower" class="w-12 h-10 pl-2 cursor-pointer bg-transparent font-medium text-xl text-slate-800 font-serif" value="a">
+
+                    <input type="button" id="text-capitalize" class="w-12 h-10 pl-2 cursor-pointer bg-transparent font-medium text-xl text-slate-800 font-serif" value="Aa">
+                    <input type="button" id="text-upper" class="w-12 h-10 pl-2 cursor-pointer bg-transparent font-medium text-xl text-slate-800 font-serif" value="A">
+                    <input type="color" id="color">
+                </div>
+            </div>
+            <div class="w-full h-1 my-4 bg-slate-500"></div>
+            <section>
+                <textarea name="textarea" id="text-field" class="w-full h-96 resize-none outline-none px-6 py-2"></textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="utility.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>
